@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 const Cors = require("cors");
 const otpAuth = require("./routes/otp-auth");
 const user = require("./routes/user");
-const contentPost = require("./routes/content-post");
 
 //App config
 const app = express();
@@ -23,6 +22,5 @@ mongoose
 
 app.use("/api/otp", otpAuth);
 app.use("/api/user", user);
-app.use("/api/content", contentPost);
 
 app.listen(port, () => console.log(`server is up on ${port}`));
